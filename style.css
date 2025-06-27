@@ -1,0 +1,38 @@
+body{
+    background-color: #363636;
+    margin: 0;
+    padding: 0;
+}
+header{
+    text-align: center;
+}
+nav{
+    background-color: #7c259e;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 20px auto;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.menu{
+    display: flex;
+    list-style-type: none;
+    padding: 5px 100px 5px 100px;
+    gap: 80px;
+    justify-content: center;
+    margin: 0;
+}
+.texto-padrao{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 50px 10px 50px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.item-menu:hover{
+    outline: #fff 1px solid;
+    border-radius: 5px;
+}
