@@ -150,6 +150,7 @@ nav {
     flex-wrap: wrap; 
     justify-content: center;
     gap: 20px;
+    padding-top: 1%;
 }
 .card {
     background-color: transparent;
@@ -173,4 +174,48 @@ nav {
 }
 .titulo{
     font-size: 20px;
+}
+
+/* config sobre */
+.sobre {
+    display: flex;
+    justify-content: space-between; 
+    padding: 20px;
+}
+.bloco-esquerdo {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: #7c259e 2px solid; 
+    border-radius: 10px;
+}
+.foto-perfil {
+    width: 60%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.texto-bio{
+    color: white;
+    font-size: clamp(0.5rem, 1.2vw, 1.5rem);
+    text-align: center;
+    margin: 10px 0;
+}
+.redes-sociais a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+}
+.redes-sociais a:hover {
+    text-decoration: underline;
+}
+.bloco-direito {
+    width: 65%;
+    padding-left: 20px;
+    border: #7c259e 2px solid; 
+    border-radius: 10px;
+    padding: 20px 10px 20px 20px;
+}
+.bloco-direito h2 {
+    margin: 0 0 10px; /* Margem abaixo do título */
 }
