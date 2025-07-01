@@ -9,8 +9,9 @@
     <body>
         <header>
             <nav>
-                <ul class="menu">
-                    <li><a href="#sobre" class="texto-padrao item-menu">Sobre mim</a></li>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <ul class="menu" id="menu">
+                    <li><a href="#sobre" class="texto-padrao item-menu">Sobre</a></li>
                     <li><a href="#formacao" class="texto-padrao item-menu">Formação</a></li>
                     <li><a href="#contato" class="texto-padrao item-menu">Portfólio</a></li>
                     <li><a href="#portfolio" class="texto-padrao item-menu">Contato</a></li>
@@ -19,6 +20,8 @@
         </header>
 
         <main>
+            <img src="/img/touch.png" alt="Mão tocando em celular" class="img-principal">
+            <!--
             <section class="card-container">
                 <div class="card">
                     <img src="/img/img-codigos.jpg" class="card-img-top" alt="...">
@@ -49,6 +52,8 @@
                     </div>
                 </div>
             </section>
+            -->
         </main>
+        <script src="script.js"></script>
     </body>
 </html>
