@@ -1,3 +1,5 @@
+/* config geral da página */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
@@ -5,13 +7,12 @@ body {
     margin: 0;
     font-family: "Poppins", sans-serif;
 }
-
 header {
     text-align: center;
     position: relative;
-    padding-top: 1%;
 }
 
+/* config navbar */
 nav {
     background-color: #7c259e;
     padding: 10px 20px;
@@ -27,7 +28,6 @@ nav {
     width: clamp(300px, 60vw, 800px); /* nunca menor que 300px, ideal 60% da tela, nunca maior que 800px */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
-
 .menu {
     display: flex;
     list-style-type: none;
@@ -35,7 +35,6 @@ nav {
     margin: 0;
     padding: 0;
 }
-
 .texto-padrao {
     text-decoration: none;
     color: #fff;
@@ -44,11 +43,9 @@ nav {
     border-radius: 20px;
     transition: background 0.3s ease;
 }
-
 .item-menu:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
-
 .menu-toggle {
     display: none;
     font-size: 28px;
@@ -59,7 +56,7 @@ nav {
     margin-right: 10px;
 }
 
-/* Responsivo */
+/* responsividade do navbar */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -67,30 +64,87 @@ nav {
         width: 90%;
         padding: 15px;
     }
-
     .menu {
         flex-direction: column;
         gap: 15px;
         display: none;
         width: 100%;
     }
-
     .menu.show {
         display: flex;
     }
-
     .menu-toggle {
         display: block;
         align-self: flex-end;
     }
 }
 
+/* config da faixa inclinada */
+.faixa-inclinada {
+  position: relative;
+  height: 70vh;
+  width: 100vw;
+  background-color: #7c259e;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 5vw;
+  box-sizing: border-box;
+}
+.faixa-inclinada::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    height: 100%;
+    background-image: url('/img/tech.png');
+    background-size: cover;
+    background-position: right;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+    z-index: 0;
+}
+.titulo-principal {
+  position: relative; /* para ficar acima do ::before */
+  color: white;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  max-width: 35vw; /* largura máxima do texto */
+  text-align: right;
+  z-index: 1;
+  margin: 0;
+  white-space: normal
+}
 .img-principal {
-    width: 100%;
-    height: auto;
-    max-width: 600px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.lado-roxo {
+  position: relative;
+  width: 50vw;
+  height: 100%;
+  background-color: #7c259e;
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+  display: flex; /* flex para centralizar o título */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+.texto-principal {
+    color: white;
+    font-size: clamp(0.5rem, 2vw, 1.5rem);
+    margin-top: 10px;
+    max-width: 80%;
+    text-align: center; 
+    line-height: 1.5;
+    z-index: 1;
+    white-space: normal
 }
 
+/* config cards */
 .card-container {
     display: flex;
     flex-wrap: wrap; 
