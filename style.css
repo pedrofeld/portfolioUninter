@@ -178,53 +178,107 @@ nav {
 
 /* config sobre */
 .sobre {
-    display: flex;
-    justify-content: space-between; 
-    padding: 20px;
-    background-color: #700899;
+    background-color: purple;
+    padding: 70px 20px 200px;
+    position: relative;
+    overflow: visible;
+    margin-top: 80px;
 }
-.container-sobre {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.bloco-esquerdo {
-    width: 30%;
+.bloco-sobre {
+    width: 90%;
+    max-width: 900px;
+    background-color: #363636;
+    border: #7c259e 2px solid;
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border: #363636 2px solid; 
-    border-radius: 10px;
+    gap: 15px;
+    margin-top: -120px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .foto-perfil {
-    width: 60%;
-    border-radius: 50%;
-    margin-bottom: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    object-fit: cover;
+    margin-bottom: 20px;
 }
-.texto-bio{
-    color: white;
-    font-size: clamp(0.5rem, 1.2vw, 1.5rem);
+.bloco-sobre h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.bloco-sobre p {
+    margin: 0;
+    line-height: 1.5;
+}
+@media (max-width: 500px) {
+    .bloco-sobre {
+    padding: 20px;
+    }
+
+    .bloco-sobre h2 {
+    font-size: 1.2rem;
+    }
+}
+.linha {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+.col-esquerda,
+.col-direita {
+    display: table-cell;
+    vertical-align: top;
+    padding: 10px;
+}
+.col-esquerda {
+    width: 30%;
     text-align: center;
-    margin: 10px 0;
 }
-.redes-sociais a {
+.col-direita {
+    width: 70%;
+}
+@media (max-width: 768px) {
+    .linha {
+        display: block;
+    }
+
+    .col-esquerda,
+    .col-direita {
+        display: block;
+        width: 100%;
+    }
+
+    .col-esquerda {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+/* config skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 0 10px;
+}
+.skills p {
+    background-color: #363636;
     color: white;
-    text-decoration: none;
-    margin: 5px 0;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    margin: 0;
+    cursor: default;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.redes-sociais a:hover {
-    text-decoration: underline;
-}
-.bloco-direito {
-    width: 65%;
-    padding-left: 20px;
-    border: #363636 2px solid; 
-    border-radius: 10px;
-    padding: 20px 10px 20px 20px;
-}
-.bloco-direito h2 {
-    margin: 0 0 10px; 
+.skills p:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
