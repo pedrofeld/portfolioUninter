@@ -170,16 +170,21 @@ nav {
     object-fit: cover;
 }
 .card-corpo {
-    padding: 10px;
+    padding: 5px 10px;
 }
 .titulo{
     font-size: 20px;
 }
+.card-corpo h5,
+.card-corpo p {
+    margin: 0;
+    padding: 10px 10px 10px 10px;
+}
 
 /* config sobre */
 .sobre {
-    background-color: purple;
-    padding: 70px 20px 200px;
+    background-color: #7c259e;
+    padding: 70px 20px 40px;
     position: relative;
     overflow: visible;
     margin-top: 80px;
