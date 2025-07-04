@@ -7,6 +7,10 @@ body {
     margin: 0;
     font-family: "Poppins", sans-serif;
 }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 header {
     text-align: center;
     position: relative;
@@ -368,8 +372,24 @@ nav {
 @media (max-width: 768px) {
   .linha-do-tempo {
     flex-direction: column;
+    align-items: center;
     height: auto;
     background-color: transparent;
+    position: relative;
+  }
+  .linha-do-tempo::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background-color: #ccc;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+  .evento {
+    margin: 40px 0;
+    z-index: 1;
   }
   .tooltip {
     position: static;
@@ -377,6 +397,11 @@ nav {
     margin-top: 10px;
     opacity: 1;
     visibility: visible;
+    width: 90%;
+    max-width: 90%;
+  }
+  .bolinha {
+    top: 0;
   }
   .bolinha:hover {
     transform: none;
