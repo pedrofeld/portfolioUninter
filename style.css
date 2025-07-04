@@ -287,3 +287,98 @@ nav {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+
+/* config timeline */
+.formacao {
+  padding: 60px 20px;
+}
+.titulo-formacao{
+    text-align: left;
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: auto;
+    margin-left: 10%;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+.linha-do-tempo {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  height: 4px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  padding: 0 20px;
+}
+.evento {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.bolinha {
+    position: relative;
+    top: -8px;
+    width: 20px;
+    height: 20px;
+    background-color: #7c259e;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    transition: transform 0.2s;
+}
+.bolinha:hover {
+  transform: scale(1.2);
+}
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px 16px;
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s;
+  z-index: 1;
+  width: fit-content;
+  max-width: 500px;
+  min-width: 200px;
+  white-space: normal;
+  box-sizing: border-box;
+}
+.evento:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+.ano {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #ccc;
+}
+@media (max-width: 768px) {
+  .linha-do-tempo {
+    flex-direction: column;
+    height: auto;
+    background-color: transparent;
+  }
+  .tooltip {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+    opacity: 1;
+    visibility: visible;
+  }
+  .bolinha:hover {
+    transform: none;
+  }
+}
