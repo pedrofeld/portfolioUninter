@@ -29,7 +29,7 @@ nav {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
-  width: clamp(300px, 60vw, 800px); /* nunca menor que 300px, ideal 60% da tela, nunca maior que 800px */
+  width: clamp(300px, 60vw, 800px); /* largura responsiva entre 300px e 800px */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 .menu {
@@ -113,7 +113,7 @@ nav {
   position: relative; /* para ficar acima do ::before */
   color: white;
   font-size: clamp(1.5rem, 3vw, 2.5rem);
-  max-width: 35vw; /* largura máxima do texto */
+  max-width: 35vw;
   text-align: right;
   z-index: 1;
   margin: 0;
@@ -460,15 +460,20 @@ nav {
   margin-top: 100px;
 }
 .projetos .card {
-  height: 220px; /* Defina uma altura fixa */
+  height: 220px; /* altura fixa  */
   display: flex;
-  flex-direction: column; /* Para que o conteúdo fique em coluna */
-  justify-content: space-between; /* Espaça o conteúdo */
+  flex-direction: column;
+  justify-content: space-between;
+}
+.projetos .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 0 3px #bb7edc;
+  border: 2px solid #bb7edc;
 }
 .projetos .card-corpo{
   background-color: #363636;
   padding: 10px;
-  flex-grow: 1; /* Faz com que o corpo do card ocupe o espaço restante */
+  flex-grow: 1; /* permite que o corpo do card ocupe o espaço restante */
 }
 .projetos .card-corpo:hover{
   cursor: pointer;
