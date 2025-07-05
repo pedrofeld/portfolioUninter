@@ -5,23 +5,22 @@ function toggleMenu() {
     console.log('Menu toggled');
 }
 
-/*
-// função para abrir e fechar modais
 function openModal(modalId) {
-    document.getElementById(modalId).style.display = "block";
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'block'; // mostra o modal
 }
 
 function closeModal(modalId) {
-    document.getElementById(modalId).style.display = "none";
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'none'; // esconde o modal
 }
 
-// fecha o modal se o usuário clicar fora dele
+// fecha o modal quando clicar fora do conteúdo do modal
 window.onclick = function(event) {
     const modals = document.getElementsByClassName('modal');
     for (let i = 0; i < modals.length; i++) {
         if (event.target === modals[i]) {
-            modals[i].style.display = "none";
+            modals[i].style.display = 'none'; // esconde o modal
         }
     }
 }
-*/
