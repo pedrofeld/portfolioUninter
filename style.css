@@ -474,11 +474,10 @@ nav {
   cursor: pointer;
 }
 .titulo-projetos{
-  text-align: left;
+  text-align: center;
   color: #fff;
   font-size: 1.5rem;
   padding-top: 50px;
-  margin-left: 10%;
   margin-bottom: 40px;
   font-weight: 600;
 }
@@ -525,4 +524,77 @@ nav {
   color: #fff;
   text-decoration: underline;
   transition: color 0.3s;
+}
+
+/* config contato */
+.contato {
+  background-color: #363636;
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+}
+.contato h2 {
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  color: #fff;
+}
+.contato form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contato label {
+  text-align: left;
+  font-weight: 500;
+  color: #ccc;
+}
+.contato input,
+.contato textarea {
+  padding: 10px;
+  border: 2px solid #7c259e;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #2a2a2a;
+  color: white;
+  outline: none;
+}
+.contato input:focus,
+.contato textarea:focus {
+  border-color: #9f40c6;
+  box-shadow: 0 0 5px #9f40c6;
+}
+.contato button {
+  background-color: #7c259e;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.contato button:hover {
+  background-color: #9f40c6;
+}
+
+/* config footer */
+footer {
+  background-color: #2a2a2a;
+  color: #ccc;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.95rem;
+}
+footer p {
+  margin: 8px 0;
+}
+footer a {
+  color: #7c259e;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+footer a:hover {
+  color: #9f40c6;
 }
